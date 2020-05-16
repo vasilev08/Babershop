@@ -2,53 +2,56 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Babershop
-</title>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Babershop</title>
 </head>
 <body>
-  <header>
-    <nav>
+
+  <header class="header">
+    <nav class='main_navigation'>
         <a><img src="img/index-logo.svg" alt="Логотоп бабершопа Бородинский " height="132"> <!-- Когда делал сам вставил лого в мэйн, это было неправильно, так как логотип стоит в шапке на каждой странице, тут пото его перенесм вниз за счет css. Контейнер <a></a> стоит по смыслу, так как на остальных страницах Логотип является ссылкаой на главную сайта --></a>
-      <ul><!-- Список ссылок, как сделать "ВОЙТИ"? Ответ: вставить как кнопку через тег <button>, при этом обернуть в следующий список (видимо чтобы был отступ)-->
+      <ul>  <!-- Список ссылок, как сделать "ВОЙТИ"? Ответ: вставить как кнопку через тег <button>, при этом обернуть в следующий список (видимо чтобы был отступ)-->
         <li><a href="info.html"> Информация</a></li>
         <li><a href="news.html">Новости</a></li>
         <li><a href="price.html">Прайс-лист</a></li>
         <li><a href="shop.html">Магазин</a></li>
         <li><a href="contacts.html">Контакты</a></li>
       </ul>
-    <ul>
-        <li><a href="login.html"> <button type="button"> Войти</button></li></a>
+       <ul class='main_navigation_enter'>
+        <li><a href="login.html"> <button type="button" class="button"> Войти</button></li></a>
       </ul>
     </nav>
   </header>
 
+  <section> <!-- Личный кабинет -->
+    <h2> Личный кабинет </h2>
+    <p> Введите пожалуйста свой логин и пароль </p>
+    <form action="#" method="POST"> 
+      <p><label for="user_login">  Логин </label>
+         <input type="email" name="login" placeholder="email@example.com" id="user_login"></p> 
+      <p>
+        <label for="user_password">  Пароль </label>
+        <input type="password" name="password" placeholder="**********" id="user_password">
+      </p> 
+      <p>
+        <label>
+          <input type="checkbox" name="remember">
+          Запомните меня </label>
+      </p>
+      <p><a href="#"> Я забыл пароль! </a></p>
+      <button type="submit" class="button"> Войти </button>
+    </form>
+    <button type="button" class="button">  Закрыть </button>
+  </section>
+
   <main>
     <h1> Бабершоп <q>Бородинский</q> </h1>
-    
-    <section> <!-- Личный кабинет -->
-      <h2> Личный кабинет </h2>
-      <p> Введите пожалуйста свой логин и пароль </p>
-      <form action="#" method="POST"> 
-        <p><label for="user_login">  Логин </label>
-           <input type="email" name="login" placeholder="email@example.com" id="user_login"></p> 
-        <p>
-          <label for="user_password">  Пароль </label>
-          <input type="password" name="password" placeholder="**********" id="user_password">
-        </p> 
-        <p>
-          <label>
-            <input type="checkbox" name="remember">
-            Запомните меня </label>
-        </p>
-        <p><a href="#"> Я забыл пароль! </a></p>
-        <button type="submit"> Войти </button>
-      </form>
-      <button type="button">  Закрыть </button>
-    </section>
 
     <section> <!-- Преимущества -->
       <h2> Преимущества </h2>
-      <ul>
+      <ul class='advantages'>
         <li>
           <h3>Быстро</h3>
           <p> Мы делаем свою работу быстро! Два часа пролетят незаметно и вы - счастливый обладатель стильной стрижки-минутки!</p>
@@ -64,6 +67,7 @@
       </ul>
     </section>
 
+   <div class="index_section">
     <section> <!-- Новости -->
       <h2> Новости </h2>
       <ul>
@@ -74,19 +78,21 @@
             <time datetime="2020-01-18"> 18 января </time>
         </li>
       </ul>
-      <a href="news.html"> Все новости </a>
+      <a href="news.html" class="button"> Все новости </a>
     </section>
 
-    <section> <!-- Фотогалерея -->
+    <section class="gallery"> <!-- Фотогалерея -->
       <h2> Фотогалерея </h2>
       <figure>
         <a href="#">
         <img src="img/interier.jpg" alt="Фотография интерьера"></a> <!-- Не стоял тек figure, но он не обязателен тут, скорее для будущего удобства. Также не стояла ссылка на картинка (тег a). Ссылка тут жуна, чтобы при нажатии на картинку она отркрывалась в большем размере) -->
       </figure>
-      <button type="button" value="Назад"> Назад </button>   <!-- У меня было так: <input type="button" value="Назад"><input type="button" value="Вперед">  в чем разница между button и input ??? -->
-      <button type="button" value="Вперед"> Вперед </button>
+      <button type="button" value="Назад" class="button"> Назад </button>   <!-- У меня было так: <input type="button" value="Назад"><input type="button" value="Вперед">  в чем разница между button и input ??? -->
+      <button type="button" value="Вперед" class="button"> Вперед </button>
     </section>
+   </div>
 
+   <div class="index_section">
     <section> <!-- Контактная информация -->
       <h2> Контактная информация </h2>
       <p> Бабершоп <q>Бородинский</q> <br>
@@ -126,17 +132,19 @@
           <label for="phone_reservation"> Телефон </label>
           <input type="tel" name="phone" id="phone_reservation" placeholder="+7 999 999 99 99">
         </p>
-        <button type="submit"> Отправить</button>
+        <button type="submit" class='button'> Отправить</button>
       </form>
     </section>
+   </div>
+   
   </main>
 
-  <footer>
-      <p>
+  <footer class='footer'>
+      <p class="footer_link">
         Бабершоп <q>Бородинский</q> <br>
         Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8 <br>
         <a href="map.hrml"> Как нас найти? </a> <br>
-        Телефон: <a href="tel:+7495660266"> +7 (495) 666-02-66 </a>
+        Телефон:  +7 (495) 666-02-66 
       </p>
     <div>
       <p> Давайте дружить</p>
@@ -154,7 +162,7 @@
   <section> <!-- Как до нас добраться -->
     <h2> Как до нас добраться </h2>
     <p> <img src="img/map.png" alt="Адрес"></p>
-    <button type="button"> Закрыть </button>
+    <button type="button" class='button'> Закрыть </button>
   </section>
 </body>
 </html>

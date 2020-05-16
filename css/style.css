@@ -1,0 +1,89 @@
+body {
+    border: 0px;
+    margin: 0px;
+    max-width: 100%;
+    /* max-width */
+
+    background-color: black;
+    background-image: url(../img/background.jpg);
+
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* вообще хз по поводу кнопки войти */
+.button {
+    border: 0;
+    background-color: black;
+   
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.header {
+background-color: black;
+}
+
+.main_navigation li{
+    list-style: none;
+    font-size: 16px;
+}
+
+.main_navigation_enter li::before{
+    content: url(../img/enter_logo.svg);
+}
+
+.main_navigation li:hover,
+.main_navigation li:focus,
+.main_navigation li:active {
+    outline: 0;              
+    background-color: #333333;
+}
+
+.advantages {
+list-style: none;
+text-align: center;
+}
+
+.advantages h3 {
+    font-size: 30px;
+}
+
+.index_section {
+    background-color: grey;
+    background-image: url(../img/backround.png);
+    background-repeat: repeat;
+
+    color: black;
+}
+
+.index_section time{
+    text-transform: none;
+}
+
+.gallery figure{
+    border: 7px;
+    background-color: #e5e5e5;
+}
+
+.footer {
+    background-color: #222222;
+}
+
+.footer li{
+    list-style: none;
+}
+
+.footer_link a{
+    text-decoration: underline;
+}
