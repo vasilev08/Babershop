@@ -4,70 +4,106 @@ body {
     max-width: 100%;
     /* max-width */
 
-    background-color: black;
-    background-image: url(../img/background.jpg);
-
-    font-family: 'PT Sans Narrow', sans-serif;
+    font-family: 'PT Sans Narrow', Arial, sans-serif;
     font-size: 14px;
     line-height: 24px;
     font-weight: bold;
     color: white;
     text-transform: uppercase;
+
+    background-color: black;
+    background-image: url(../img/background.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
 }
 
 a {
     text-decoration: none;
-    color: inherit;
 }
 
-/* вообще хз по поводу кнопки войти */
+
 .button {
-    border: 0;
-    background-color: black;
-   
+    font: inherit;
+    font-weight: 700;
+    
+    text-align: center;
     color: white;
     text-transform: uppercase;
-    font-weight: bold;
+
+    border: 0;
+    background-color: black;
 }
 
-.header {
+.button:hover,
+.button:focus,
+.button:active {
+    background-color: #663d15;
+}
+
+.main_navigation {
 background-color: black;
+font-size: 16px;
+line-height: 20px;
+color: #ffffff;
 }
 
-.main_navigation li{
+.site_navigation,
+.user_navigation {
     list-style: none;
-    font-size: 16px;
 }
 
-.main_navigation_enter li::before{
+.site_navigation a,
+.user_navigation a {
+   color: #ffffff;
+}
+
+
+
+.site_navigation a:hover,
+.site_navigatio a:focus
+.user_navigation a:hover,
+.user_navigation a:focus {
+    outline: 0;              
+    background-color: #242424;
+}
+
+.user_navigation li::before{
     content: url(../img/enter_logo.svg);
 }
 
-.main_navigation li:hover,
-.main_navigation li:focus,
-.main_navigation li:active {
-    outline: 0;              
-    background-color: #333333;
-}
-
-.advantages {
+.advantages_list {
 list-style: none;
 text-align: center;
 }
 
-.advantages h3 {
+.advantages_list h3 {
     font-size: 30px;
+    line-height: 42px;
 }
 
 .index_section {
     background-color: grey;
     background-image: url(../img/backround.png);
+    background-position: 0 0;
     background-repeat: repeat;
 
     color: black;
 }
 
-.index_section time{
+.index_section h2 {
+    font-size: 30px;
+    line-height: 42px;
+}
+
+.index_section li{
+    list-style: none;
+}
+
+.news{
+    list-style: none;
+}
+
+.news time {
     text-transform: none;
 }
 
@@ -76,14 +112,93 @@ text-align: center;
     background-color: #e5e5e5;
 }
 
-.footer {
-    background-color: #222222;
+.contacts a {
+    color: #000;
 }
 
-.footer li{
+.appointment_item input {
+    font:inherit;
+    background-color: transparent;
+    border: 2px solid black;
+}
+
+.main_footer {
+    background-color: #222222;
+    background-image: url(../img/background_footer.jpg);
+    background-position: 0 0;
+    background-repeat: repeat;
+}
+
+.main_footer li{
     list-style: none;
 }
 
-.footer_link a{
+.main_footer a{
+    list-style: none;
+    color: white;
+}
+
+.footer_contacts a {
     text-decoration: underline;
+}
+
+footer_contacts a:hover,
+footer_contacts a:focus {
+    text-decoration: none;
+}
+
+.footer_social {
+    text-align: center;
+}
+
+ 
+.footer_copyright {
+    text-align: center;
+}
+
+.footer_copyright .button:hover,
+.footer_copyright .button:focus {
+    background-color: #fff;
+    color: #000;
+}
+
+.modal {
+    background-color: f8f5f2;
+    background-image: url(../img/backround.png);
+    background-position:0 0;
+    background-repeat: repeat;
+
+    color: black;
+}
+
+.modal a {
+    color: #000;
+}
+
+.login_form input  {
+    font: inherit;
+    text-transform: uppercase;
+    color:#000;
+    background-color: #f9f6f3;
+    border: 3px solid #000;
+}
+
+.login_checkbox:hover,
+.login_checkbox:focus {
+    color: #663d15;
+}
+
+.remember_password a {
+    text-decoration: underline;
+}
+
+.modal h2 {
+    font-size: 30px;
+    line-height: 42px;
+}
+
+.map {
+    border: 7px solid white;
+    width: 766px;
+    height: 560px;
 }

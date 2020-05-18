@@ -9,49 +9,28 @@
 </head>
 <body>
 
-  <header class="header">
-    <nav class='main_navigation'>
+  <header class='main_navigation'>
+    <nav >
         <a><img src="img/index-logo.svg" alt="Логотоп бабершопа Бородинский " height="132"> <!-- Когда делал сам вставил лого в мэйн, это было неправильно, так как логотип стоит в шапке на каждой странице, тут пото его перенесм вниз за счет css. Контейнер <a></a> стоит по смыслу, так как на остальных страницах Логотип является ссылкаой на главную сайта --></a>
-      <ul>  <!-- Список ссылок, как сделать "ВОЙТИ"? Ответ: вставить как кнопку через тег <button>, при этом обернуть в следующий список (видимо чтобы был отступ)-->
+      <ul class='site_navigation'>  <!-- Список ссылок, как сделать "ВОЙТИ"? Ответ: вставить как кнопку через тег <button>, при этом обернуть в следующий список (видимо чтобы был отступ)-->
         <li><a href="info.html"> Информация</a></li>
         <li><a href="news.html">Новости</a></li>
         <li><a href="price.html">Прайс-лист</a></li>
         <li><a href="shop.html">Магазин</a></li>
         <li><a href="contacts.html">Контакты</a></li>
       </ul>
-       <ul class='main_navigation_enter'>
+       <ul class='user_navigation'>
         <li><a href="login.html"> <button type="button" class="button"> Войти</button></li></a>
       </ul>
     </nav>
   </header>
-
-  <section> <!-- Личный кабинет -->
-    <h2> Личный кабинет </h2>
-    <p> Введите пожалуйста свой логин и пароль </p>
-    <form action="#" method="POST"> 
-      <p><label for="user_login">  Логин </label>
-         <input type="email" name="login" placeholder="email@example.com" id="user_login"></p> 
-      <p>
-        <label for="user_password">  Пароль </label>
-        <input type="password" name="password" placeholder="**********" id="user_password">
-      </p> 
-      <p>
-        <label>
-          <input type="checkbox" name="remember">
-          Запомните меня </label>
-      </p>
-      <p><a href="#"> Я забыл пароль! </a></p>
-      <button type="submit" class="button"> Войти </button>
-    </form>
-    <button type="button" class="button">  Закрыть </button>
-  </section>
 
   <main>
     <h1> Бабершоп <q>Бородинский</q> </h1>
 
     <section> <!-- Преимущества -->
       <h2> Преимущества </h2>
-      <ul class='advantages'>
+      <ul class='advantages_list'>
         <li>
           <h3>Быстро</h3>
           <p> Мы делаем свою работу быстро! Два часа пролетят незаметно и вы - счастливый обладатель стильной стрижки-минутки!</p>
@@ -68,7 +47,7 @@
     </section>
 
    <div class="index_section">
-    <section> <!-- Новости -->
+    <section class="news"> <!-- Новости -->
       <h2> Новости </h2>
       <ul>
         <li> <p> Нам наконец завезли Ягермайстер! Теперь вы можете пропустить стаканчик в овремя стрижки </p>
@@ -93,7 +72,7 @@
    </div>
 
    <div class="index_section">
-    <section> <!-- Контактная информация -->
+    <section class="contacts "> <!-- Контактная информация -->
       <h2> Контактная информация </h2>
       <p> Бабершоп <q>Бородинский</q> <br>
         Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8 <br>
@@ -112,7 +91,7 @@
       </p>
     </section>
 
-    <section> <!-- Записаться -->
+    <section class='appointment_item'> <!-- Записаться -->
       <h2> Записаться </h2>
       <p> Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
       <form action="#" method="POST">
@@ -126,7 +105,7 @@
         </p>  
         <p>
           <label for="name_reservation"> Ваше имя </label>
-          <input type="text" name="name" placeholder="Фамилия Имя" id="name_reservation">
+          <input type="text" name="name" placeholder="Борода>" id="name_reservation">
         </p>
         <p>
           <label for="phone_reservation"> Телефон </label>
@@ -139,14 +118,14 @@
    
   </main>
 
-  <footer class='footer'>
-      <p class="footer_link">
+  <footer class='main_footer'>
+      <p class="footer_contacts">
         Бабершоп <q>Бородинский</q> <br>
         Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8 <br>
         <a href="map.hrml"> Как нас найти? </a> <br>
         Телефон:  +7 (495) 666-02-66 
       </p>
-    <div>
+    <div class='footer_social'>
       <p> Давайте дружить</p>
       <ul>
         <li> <a href="#"> ВКонтакте </a> </li>
@@ -154,15 +133,41 @@
         <li> <a href="#"> Instagram </a> </li>
       </ul>
     </div>
-      <p> Разработано:
-         <a href="#"> HTML Academy </a></p>
+
+    <div class="footer_copyright">
+      <p> Разработано: <br>
+        <a href="#" class='button'> HTML Academy </a></p>
+    </div>
   </footer>
 
+  <section class='modal'> <!-- Личный кабинет -->
+    <h2> Личный кабинет </h2>
+    <p> Введите пожалуйста свой логин и пароль </p>
+    <form action="#" method="POST" class='login_form'> 
+      <p><label for="user_login">  Логин </label>
+         <input type="email" name="login" placeholder="email@example.com" id="user_login"></p> 
+      <p>
+        <label for="user_password">  Пароль </label>
+        <input type="password" name="password" placeholder="**********" id="user_password">
+      </p> 
+      <p class='login_checkbox'>
+        <label>
+          <input type="checkbox" name="remember">
+          Запомните меня </label>
+      </p>
+      <p class="remember_password"><a href="#"> Я забыл пароль! </a></p>
+      <button type="submit" class="button"> Войти </button>
+    </form>
+    <button type="button" class="button">  Закрыть </button>
+  </section>
 
-  <section> <!-- Как до нас добраться -->
+  <section class="map"> <!-- Как до нас добраться -->
     <h2> Как до нас добраться </h2>
     <p> <img src="img/map.png" alt="Адрес"></p>
     <button type="button" class='button'> Закрыть </button>
   </section>
+
+
 </body>
 </html>
+ 
