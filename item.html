@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Babershop</title>
+</head>
+<body  class='good'>
+
+  <header class='main_header'>
+    <nav class='main_navigation'>
+        <a class='main-header-logo'><img src="img/logo.svg" alt="Логотоп бабершопа Бородинский"> <!-- Когда делал сам вставил лого в мэйн, это было неправильно, так как логотип стоит в шапке на каждой странице, тут пото его перенесм вниз за счет css. Контейнер <a></a> стоит по смыслу, так как на остальных страницах Логотип является ссылкаой на главную сайта --></a>
+      <ul class='site_navigation'>  <!-- Список ссылок, как сделать "ВОЙТИ"? Ответ: вставить как кнопку через тег <button>, при этом обернуть в следующий список (видимо чтобы был отступ)-->
+        <li><a href="info.html"> Информация</a></li>
+        <li><a href="news.html">Новости</a></li>
+        <li><a href="price.html">Прайс-лист</a></li>
+        <li><a href="shop.html">Магазин</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+      </ul>
+       <ul class='user_navigation'>
+        <li><a href="login.html"> <button type="button" class="button"> Войти</button></li></a>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class='visually-hidden'>Набор для путешествий «Baxter of California» </h1>
+    <!-- ТУТ ПУТЬ К СТРАНИЦЕ -->
+    <section>
+        <h2> Галлерея фотографий товара</h2>
+        <img src="img/good_1.png" alt="">
+        <img src="img/good_2.png" alt="">
+        <img src="img/good_3.png" alt="">
+        <img src="img/good_4.png" alt="">
+    </section>
+
+    <section class="good_options">
+        <h2> Описание товара </h2>
+        <ul>
+            <li> <h3 class='visually-hidden'> Наличие </h3>
+                <p>есть в наличии</p>
+            </li>
+            <li> <h3 class='visually-hidden'>Артикул</h3>
+                <p class='aricle'>Артикул: Dexter-AE</p>
+            </li>
+            <li> <h3 class='visually-hidden'>Описание</h3> 
+                <p> Travel Kit – необходимый аксессуар во время любого путешествия. В аккуратной кожаной сумке находится все, что нужно для бритья и ухода за кожей во время рабочей поездки или отдыха: средство для умывания, увлажняющий крем, крем для бритья, крем после бритья, шампунь. Набор также может стать отличным подарком.</p>
+            </li>
+            <li> <h3 class='visually-hidden'> Цена </h3>
+                <p class="good_price">2 900 р <button type="button" class="button"> Купить </button></p>
+            </li>
+            <li> <h3> В набор входят </h3>
+                <ul class="good_compose">
+                    <li>Средство для умывания (50 мл)</li>
+                    <li>Увлажняющий крем (50 мл)</li>
+                    <li>Крем для бритья (50 мл)</li>
+                    <li>Крем после бритья, шампунь (50 мл)</li>
+                    <li>Удобная кожаная косметичка</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+  </main>
+
+  <footer class='main_footer'>
+      <p class="footer_contacts">
+        Бабершоп <q>Бородинский</q> <br>
+        Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8 <br>
+        <a href="map.hrml"> Как нас найти? </a> <br>
+        Телефон:  +7 (495) 666-02-66 
+      </p>
+    <div class='footer_social'>
+      <p> Давайте дружить</p>
+      <ul>
+        <li> <a href="#"> ВКонтакте </a> </li>
+        <li> <a href="#"> Facebook </a> </li>
+        <li> <a href="#"> Instagram </a> </li>
+      </ul>
+    </div>
+
+    <div class="footer_copyright">
+      <p> Разработано: <br>
+        <a href="#" class='button'> HTML Academy </a></p>
+    </div>
+  </footer>
+
+  <section class='modal'> <!-- Личный кабинет -->
+    <h2> Личный кабинет </h2>
+    <p> Введите пожалуйста свой логин и пароль </p>
+    <form action="#" method="POST" class='login_form'> 
+      <p><label for="user_login">  Логин </label>
+         <input type="email" name="login" placeholder="email@example.com" id="user_login"></p> 
+      <p>
+        <label for="user_password">  Пароль </label>
+        <input type="password" name="password" placeholder="**********" id="user_password">
+      </p> 
+      <p class='login_checkbox'>
+        <label>
+          <input type="checkbox" name="remember">
+          Запомните меня </label>
+      </p>
+      <p class="remember_password"><a href="#"> Я забыл пароль! </a></p>
+      <button type="submit" class="button"> Войти </button>
+    </form>
+    <button type="button" class="button">  Закрыть </button>
+  </section>
+
+  <section class="map"> <!-- Как до нас добраться -->
+    <h2> Как до нас добраться </h2>
+    <p> <img src="img/map.png" alt="Адрес"></p>
+    <button type="button" class='button'> Закрыть </button>
+  </section>
+
+
+</body>
+</html>
+ 

@@ -9,37 +9,41 @@
 </head>
 <body>
 
-  <header class='main_navigation'>
-    <nav >
-        <a><img src="img/index-logo.svg" alt="Логотоп бабершопа Бородинский " height="132"> <!-- Когда делал сам вставил лого в мэйн, это было неправильно, так как логотип стоит в шапке на каждой странице, тут пото его перенесм вниз за счет css. Контейнер <a></a> стоит по смыслу, так как на остальных страницах Логотип является ссылкаой на главную сайта --></a>
-      <ul class='site_navigation'>  <!-- Список ссылок, как сделать "ВОЙТИ"? Ответ: вставить как кнопку через тег <button>, при этом обернуть в следующий список (видимо чтобы был отступ)-->
-        <li><a href="info.html"> Информация</a></li>
-        <li><a href="news.html">Новости</a></li>
-        <li><a href="price.html">Прайс-лист</a></li>
-        <li><a href="shop.html">Магазин</a></li>
-        <li><a href="contacts.html">Контакты</a></li>
-      </ul>
-       <ul class='user_navigation'>
-        <li><a href="login.html"> <button type="button" class="button"> Войти</button></li></a>
-      </ul>
+  <header clss='main_header'>
+    <nav class='main_navigation'>
+        <a class='main-header-logo'><img src="img/index-logo.svg" alt="Логотоп бабершопа Бородинский " > <!-- Когда делал сам вставил лого в мэйн, это было неправильно, так как логотип стоит в шапке на каждой странице, тут пото его перенесм вниз за счет css. Контейнер <a></a> стоит по смыслу, так как на остальных страницах Логотип является ссылкаой на главную сайта --></a>
+      <div class='main_navigation_wrapper'>
+        <div class='container'>
+          <ul class='site_navigation'>  <!-- Список ссылок, как сделать "ВОЙТИ"? Ответ: вставить как кнопку через тег <button>, при этом обернуть в следующий список (видимо чтобы был отступ)-->
+            <li><a href="info.html"> Информация</a></li>
+            <li><a href="news.html">Новости</a></li>
+            <li><a href="price.html">Прайс-лист</a></li>
+            <li><a href="shop.html">Магазин</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+          </ul>
+           <ul class='user_navigation'>
+            <li><a href="login.html"> <button type="button" class="button"> Войти</button></li></a>
+          </ul>
+        </div>
+      </div>
     </nav>
   </header>
 
-  <main>
-    <h1> Бабершоп <q>Бородинский</q> </h1>
+  <main  class='container'>
+    <h1 class='visually-hidden'> Бабершоп <q>Бородинский</q> </h1>
 
     <section> <!-- Преимущества -->
-      <h2> Преимущества </h2>
+      <h2 class='visually-hidden'> Преимущества </h2>
       <ul class='advantages_list'>
-        <li>
+        <li class='advantages_item'>
           <h3>Быстро</h3>
           <p> Мы делаем свою работу быстро! Два часа пролетят незаметно и вы - счастливый обладатель стильной стрижки-минутки!</p>
         </li>
-        <li>
+        <li class='advantages_item'>
           <h3>Круто</h3>
           <p>Забудтье, как вы стриглись раньше. Мы сделаем из вас звезду футбола и кино! Во всяком случае внешне.</p>
         </li>
-        <li>
+        <li class='advantages_item'>
           <h3>Дорого</h3>
           <p> Наши мастера - профессионалы своего дела и не могут стоить дешево. К тому же, разве цена не дает определенный статус? </p>
         </li>
@@ -119,24 +123,28 @@
   </main>
 
   <footer class='main_footer'>
-      <p class="footer_contacts">
-        Бабершоп <q>Бородинский</q> <br>
-        Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8 <br>
-        <a href="map.hrml"> Как нас найти? </a> <br>
-        Телефон:  +7 (495) 666-02-66 
-      </p>
-    <div class='footer_social'>
-      <p> Давайте дружить</p>
-      <ul>
-        <li> <a href="#"> ВКонтакте </a> </li>
-        <li> <a href="#"> Facebook </a> </li>
-        <li> <a href="#"> Instagram </a> </li>
-      </ul>
-    </div>
+    <div class='container main_footer_wrapper'>
+      <div  class="footer_contacts">
+        <p>
+          Бабершоп <q>Бородинский</q> <br>
+          Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8 <br>
+          <a href="map.hrml"> Как нас найти? </a> <br>
+          Телефон:  +7 (495) 666-02-66 
+        </p>
+      </div>
+      <div class='footer_social'>
+        <p> Давайте дружить</p>
+        <ul>
+          <li> <a href="#"> ВКонтакте </a> </li>
+          <li> <a href="#"> Facebook </a> </li>
+          <li> <a href="#"> Instagram </a> </li>
+        </ul>
+      </div>
 
-    <div class="footer_copyright">
-      <p> Разработано: <br>
-        <a href="#" class='button'> HTML Academy </a></p>
+      <div class="footer_copyright">
+        <p> Разработано: <br>
+          <a href="#" class='button'> HTML Academy </a></p>
+      </div>
     </div>
   </footer>
 

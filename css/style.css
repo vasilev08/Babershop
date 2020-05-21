@@ -21,6 +21,22 @@ a {
     text-decoration: none;
 }
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+
+
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important; 
+	width: 1px !important; 
+	overflow: hidden;
+}
 
 .button {
     font: inherit;
@@ -40,16 +56,46 @@ a {
     background-color: #663d15;
 }
 
+.main_header {
+ 
+}
+
 .main_navigation {
-background-color: black;
-font-size: 16px;
-line-height: 20px;
-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    line-height: 20px;
+    color: #ffffff;
+    align-items: center;
+}
+
+.main-header-logo {
+    height: 155px;
+    width: 371px;
+    order: 1;
+}
+
+.main_navigation_wrapper {
+    width: 100%;
+    margin-bottom: 50px;
+    background-color: black;
+}
+
+.container {
+    width: 940px; /*это размер ширины контента на странице*/
+    margin: 0 auto;
+}
+
+.main_navigation .container {
+    display: flex;
+    justify-content: space-between;
 }
 
 .site_navigation,
 .user_navigation {
     list-style: none;
+    color: #ffffff;
+
 }
 
 .site_navigation a,
@@ -71,9 +117,14 @@ color: #ffffff;
     content: url(../img/enter_logo.svg);
 }
 
+
 .advantages_list {
-list-style: none;
-text-align: center;
+    display: flex;
+    margin-bottom: 84px;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    justify-content: space-between;
 }
 
 .advantages_list h3 {
@@ -81,7 +132,17 @@ text-align: center;
     line-height: 42px;
 }
 
+.advantages_item {
+    width: 291px;
+    font-size: 14px;
+}
+
 .index_section {
+    display: flex;
+    margin-bottom: 48px;
+    justify-content: space-between;
+    padding: 50px 80px;
+   
     background-color: grey;
     background-image: url(../img/backround.png);
     background-position: 0 0;
@@ -93,18 +154,31 @@ text-align: center;
 .index_section h2 {
     font-size: 30px;
     line-height: 42px;
+    margin: 0;
 }
 
 .index_section li{
     list-style: none;
 }
 
+
 .news{
+    width: 350px;
     list-style: none;
+}
+
+.news ul ,
+.news h2 {
+    padding: 0;
+
 }
 
 .news time {
     text-transform: none;
+}
+
+.gallery{
+    width: 300px;
 }
 
 .gallery figure{
@@ -112,8 +186,16 @@ text-align: center;
     background-color: #e5e5e5;
 }
 
+.contacts {
+    width: 325px;
+} 
+
 .contacts a {
     color: #000;
+}
+
+.appointment_item {
+    width: 300px;
 }
 
 .appointment_item input {
@@ -127,6 +209,7 @@ text-align: center;
     background-image: url(../img/background_footer.jpg);
     background-position: 0 0;
     background-repeat: repeat;
+    color: #fff;
 }
 
 .main_footer li{
@@ -142,18 +225,26 @@ text-align: center;
     text-decoration: underline;
 }
 
-footer_contacts a:hover,
-footer_contacts a:focus {
+.footer_contacts a:hover,
+.footer_contacts a:focus {
     text-decoration: none;
 }
 
+.main_footer_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .footer_social {
+    text-align: center;
+    margin-left: 80px;
+    margin-right: 250px;
     text-align: center;
 }
 
  
 .footer_copyright {
-    text-align: center;
 }
 
 .footer_copyright .button:hover,
@@ -201,4 +292,40 @@ footer_contacts a:focus {
     border: 7px solid white;
     width: 766px;
     height: 560px;
+}
+
+.index_section {
+    background-color: grey;
+    background-image: url(../img/backround.png);
+    background-position: 0 0;
+    background-repeat: repeat;
+
+    color: black;
+}
+
+.good {
+    background-color: grey;
+    background-image: url(../img/backround.png);
+    background-position: 0 0;
+    background-repeat: repeat;
+
+    color: black;
+}
+
+.good_price {
+    background-color: #e5e5e5;
+}
+
+.good_compose li {
+    list-style-type: square;
+}
+
+.good_options h3 {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: bold;
+}
+
+.good_options .aricle {
+    color: rgb(174, 174, 174);
 }
